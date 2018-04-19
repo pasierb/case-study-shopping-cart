@@ -16,7 +16,7 @@ function ProductList(props) {
       product={product} />);
   });
 
-  return (<div>
+  return (<div className="ProductList">
     {items.length ? (<table className="table is-fullwidth">
       <thead>
         <tr>

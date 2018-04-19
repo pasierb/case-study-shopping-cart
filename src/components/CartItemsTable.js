@@ -4,7 +4,7 @@ import CartItemRow from './CartItemRow';
 function CartItemsTable(props) {
   const { items = [], onChangeItemQuantity } = props;
 
-  return (<table className="table is-fullwidth">
+  return (<table className="table is-fullwidth CartItemsTable">
     <thead>
       <tr>
         <th>Product</th>

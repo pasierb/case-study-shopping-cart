@@ -28,12 +28,12 @@ function CartSummary(props) {
   }, { base: 0, total: 0, discount: 0 });
 
   return (<div>
-    <CartSummaryItem value={base} label="Subtotal" />
+    <CartSummaryItem value={base} label={`Subtotal ${items.length} item(s)`} />
     <CartSummaryItem value={discount} label="Discount" />
     {discount < 0 && itemsValue.filter(({ discount }) => discount < 0).map(itemValue => (
       <div key={itemValue.product.id} className="columns is-mobile">
         <div className="column is-1"></div>
-        <div className="column">
+        <div className="column has-text-left">
           {itemValue.product.name} - {itemValue.promotion.name}
         </div>
         <div className="column has-text-right">
@@ -41,7 +41,7 @@ function CartSummary(props) {
         </div>
       </div>
     ))}
-    <CartSummaryItem value={total} label="Total" />
+    <CartSummaryItem value={total} label="Total" className="total" />
   </div>);
 }
 

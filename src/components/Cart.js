@@ -6,8 +6,13 @@ import CartSummary from './CartSummary';
 function Cart(props) {
   const { items = [], onChangeItemQuantity } = props;
 
-  return (<div>
+  return (<div className="Cart">
     {items.length ? (<div>
+      <div className="has-text-right">
+        <a onClick={window.print} className="button">
+          <i className="fa fa-print" />
+         </a>
+      </div>
       <CartItemsTable items={items} onChangeItemQuantity={onChangeItemQuantity} />
       <CartSummary items={items} />
     </div>) : (
