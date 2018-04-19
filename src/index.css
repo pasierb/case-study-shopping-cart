@@ -33,11 +33,21 @@
 
   .cart-wrapper::before {
     text-align: center;
-    content: "Thanks for shopping!";
+    content: "\
+Thanks for shopping!\A\A\
+Interwebs, CH\A\
+https://github.com/pasierb";
+    white-space: pre;
   }
+
 
   .CartItemsTable {
     margin-top: 20px;
+  }
+
+  .CartItemsTable::before {
+    content: "Cashier: Michal";
+    white-space: pre;
   }
 
   .CartSummaryItem {
